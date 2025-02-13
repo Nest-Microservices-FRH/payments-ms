@@ -13,4 +13,5 @@ Actualizar datos en envs config
 private readonly stripe = new Stripe(envs.stripeSecret);
 ```
 
-## 
+## configurar payment session
+
