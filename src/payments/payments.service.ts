@@ -39,7 +39,24 @@ export class PaymentsService {
 
   async stripeWebhook(req: Request, res: Response) {
     const signature = req.headers['stripe-signature'];
-    console.log({ signature });
+
+    let event: Stripe.Event;
+    // this is for local development only, check terminal when listening to stripe events
+    // Your webhook signing secret is whsec_...
+    const endpointSecret = envs.stripeWebhookSecret;
+
+    try {
+      event = this.stripe.webhooks.constructEvent(
+        req['rawBody'],
+        signature,
+        endpointSecret,
+      );
+    } catch (err) {
+      console.log(`⚠️  Webhook signature verification failed.`, err.message);
+      return res.sendStatus(400);
+    }
+
+    console.log({ event });
     return res.status(200).json({ signature });
   }
 }
