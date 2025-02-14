@@ -41,3 +41,14 @@ brew install stripe/stripe-cli/stripe
 ```
 
 web : https://docs.stripe.com/stripe-cli#install
+
+## iniciar stripe
+en la terminal ejecutar:
+``` 
+stripe login
+```
+
+## Dar acceso a stripe
+en la web seleccionas el proyecto que usas y le das acceso.
+este acceso a stripe dura 90 dias.
+nos pediran volver a autenticarnos cuando pase ese tiempo.
