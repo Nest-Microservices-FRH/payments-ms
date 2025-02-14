@@ -34,3 +34,10 @@ ejemplo de postman:
     ]
 }
 ```
+
+## instalar con homebrew el cli de stripe
+```
+brew install stripe/stripe-cli/stripe
+```
+
+web : https://docs.stripe.com/stripe-cli#install
