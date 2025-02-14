@@ -52,3 +52,18 @@ stripe login
 en la web seleccionas el proyecto que usas y le das acceso.
 este acceso a stripe dura 90 dias.
 nos pediran volver a autenticarnos cuando pase ese tiempo.
+
+## Crear un webhook
+en la terminal ejecutar:
+```
+stripe listen --forward-to http://localhost:3003/payments/webhook
+```
+teniendo en cuenta que la url es la que preparamos para nuestro webhook.
+importante : no cerrar la terminal en la que ejecutamos esto.
+
+## Activar eventos en stripe
+abrimos una nueva terminal y ejecutamos:
+```
+stripe trigger payment_intent.succeeded
+```
+esto simulara un pago exitoso.
