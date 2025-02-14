@@ -67,3 +67,7 @@ abrimos una nueva terminal y ejecutamos:
 stripe trigger payment_intent.succeeded
 ```
 esto simulara un pago exitoso.
+
+## Empezamos a gerstionar los eventos del hebhook
+vemos primero el signature que nos envia lanzando el trigger.
+y seguimos configurando lo necesario en las llamadas 
