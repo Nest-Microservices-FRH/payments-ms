@@ -71,3 +71,17 @@ esto simulara un pago exitoso.
 ## Empezamos a gerstionar los eventos del hebhook
 vemos primero el signature que nos envia lanzando el trigger.
 y seguimos configurando lo necesario en las llamadas 
+
+
+## Crear un endpoint para recibir el webhook
+- para esto vamos a usar Hookdeck
+- vamos a la web
+```
+https://hookdeck.com/
+```
+- entramos a nuestra cuenta
+- tenemos un tier gratuito que nos permite 1000 eventos al mes.
+
+- terminamos la configuracion de el endpoint ern hookdeck
+- copiamos la url que nos da hookdeck
+- seguimos los igyuientes pasos en 
